@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  background: rgb(228, 255, 218);
+}
+
+h2 {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 50%;
+  margin: auto;
+}
+
+input,
+select {
+  height: 50px;
+  width: 100%;
+  border: 1px solid lightcoral;
+  outline: none;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
