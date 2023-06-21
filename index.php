@@ -76,8 +76,8 @@ include_once './php/conn.php';
         </tbody>
     </table>
 
-    <h2>Ažuriranje podataka o predmetima</h2>
-    <form action="update-subject.php" method="POST">
+    <h2>Dodavanje/Ažuriranje podataka o predmetima</h2>
+    <form action="./php/update-subject.php" method="POST">
         <label for="predmet_id">Predmet ID:</label>
         <input type="text" name="predmet_id" required>
         <label for="naziv">Naziv:</label>
@@ -91,37 +91,22 @@ include_once './php/conn.php';
         <input type="submit" value="Update">
     </form>
 
-    <h2>Dodeljivanje predmeta za studente</h2>
-    <form action="assign-subject.php" method="POST">
-        <label for="indeks">Student:</label>
-        <select name="predmet_id" required>
-            <?php
-            $stmt = $pdo->query("SELECT indeks, ime, prezime FROM student");
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $predmet_id = $row['indeks'];
-                $ime = $row['ime'] . ' ' . $row['prezime'];
-                echo "<option value='$predmet_id'>$ime</option>";
-            }
-            ?>
+    <h2>Predmeti - Studenti</h2>
+    <form action="./php/assign-subject.php" method="POST">
+        <label for="indeks">Rok:</label>
+        <select name="oznaka_roka" required>
+            <option value="mar">Mart</option>
+            <option value="apr">April</option>
+            <option value="jun">Jun</option>
         </select>
-        <label for="predmet_id">Predmet ID:</label>
-        <select name="predmet_id" required>
-            <?php
-            $stmt = $pdo->query("SELECT predmet_id, naziv FROM predmet");
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $predmet_id = $row['predmet_id'];
-                $naziv = $row['naziv'];
-                echo "<option value='$predmet_id'>$naziv</option>";
-            }
-            ?>
-        </select>
-        <input type="submit" value="Assign">
-    </form>
-
-    <h2>Uklanjanje predmeta za studente</h2>
-    <form action="remove-subject.php" method="POST">
+        <label for="datum_overa">Datum:</label>
+        <input type="text" name="datum_overa" required>
+        <label for="godina_roka">Godina:</label>
+        <input type="text" name="godina_roka" required>
+        <label for="ocena">Ocena:</label>
+        <input type="text" name="ocena" required>
         <label for="indeks">Student:</label>
-        <select name="predmet_id" required>
+        <select name="indeks" required>
             <?php
             $stmt = $pdo->query("SELECT indeks, ime, prezime FROM student");
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -143,7 +128,7 @@ include_once './php/conn.php';
             }
             ?>
         </select>
-        <input type="submit" value="Ukloni">
+        <input type="submit" value="Submit">
     </form>
 </body>
 
