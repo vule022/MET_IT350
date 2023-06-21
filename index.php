@@ -14,6 +14,14 @@ include_once './php/conn.php';
 </head>
 
 <body>
+    <ul>
+        <li><a href="zadatak_9_8.php">Domaci 9 - Zadatak 8</a></li>
+        <li><a href="zadatak_9_16.php">Domaci 9 - Zadatak 16</a></li>
+        <li><a href="zadatak_9_24.php">Domaci 9 - Zadatak 24</a></li>
+        <li><a href="zadatak_10_8.php">Domaci 10 - Zadatak 8</a></li>
+        <li><a href="zadatak_10_1.php">Domaci 10 - Zadatak 1</a></li>
+        <li><a href="zadatak_10_9.php">Domaci 10 - Zadatak 9</a></li>
+    </ul>
     <h1>CRUD</h1>
 
     <h2>Angažovanje profesora i saradnika</h2>
