@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CRUD</h1>
+
+    <h2>Angažovanje profesora i saradnika</h2>
+    <form action="update-engagement.php" method="POST">
+        <label for="angazovanje_id">Angažovanje ID:</label>
+        <input type="text" name="angazovanje_id" required><br>
+        <label for="profesor_id">Profesor ID:</label>
+        <input type="text" name="profesor_id" required><br>
+        <label for="predmet_id">Predmet ID:</label>
+        <input type="text" name="predmet_id" required><br>
+        <input type="submit" value="Update">
+    </form>
+
+    <h2>Ažuriranje podataka o predmetima</h2>
+    <form action="update-subject.php" method="POST">
+        <label for="predmet_id">Predmet ID:</label>
+        <input type="text" name="predmet_id" required><br>
+        <label for="naziv">Naziv:</label>
+        <input type="text" name="naziv" required><br>
+        <label for="espb">ESPB:</label>
+        <input type="text" name="espb" required><br>
+        <label for="br_cas_predavanja">Broj časova predavanja:</label>
+        <input type="text" name="br_cas_predavanja" required><br>
+        <label for="br_cas_vezbe">Broj časova vežbi:</label>
+        <input type="text" name="br_cas_vezbe" required><br>
+        <input type="submit" value="Update">
+    </form>
+
+    <h2>Dodeljivanje ili uklanjanje predmeta za studente</h2>
+    <form action="assign-subject.php" method="POST">
+        <label for="indeks">Indeks:</label>
+        <input type="text" name="indeks" required><br>
+        <label for="predmet_id">Predmet ID:</label>
+        <input type="text" name="predmet_id" required><br>
+        <input type="submit" value="Assign">
+    </form>
+</body>
+
+</html>
